@@ -1,0 +1,47 @@
+.nomes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.nomes div {
+  width: 230px;
+}
+
+.contact {
+  margin: 20px;
+}
+
+.footer {
+  background: linear-gradient(205.81deg, #242424 -7.09%, #0d0d0d 48.6%);
+  color: white;
+
+  margin: 0 auto;
+
+  width: 100%;
+  min-height: 200px;
+  padding: 50px 0;
+
+  font-size: 10px;
+  font-family: Montserrat;
+  text-align: center;
+}
+
+.footer h1 {
+  font-size: 1.6rem;
+  margin-bottom: 50px;
+}
+.h2 {
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 600;
+  padding-bottom: 10px;
+  text-align: center;
+}
+.a {
+  color: #ff9492;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+}

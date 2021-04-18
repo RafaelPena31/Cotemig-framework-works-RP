@@ -1,0 +1,35 @@
+.title {
+  color: #031b4e;
+  font-family: Montserrat;
+  font-weight: 300;
+  text-align: left;
+  font-size: 20pt;
+  width: 90%;
+  margin: 40px 0 30px 0;
+}
+
+.relativeCardContainer {
+  width: 100%;
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1%;
+  padding: 0 5px;
+}
+
+@media only screen and (min-width: 658px) {
+  .title {
+    font-size: 28pt;
+    text-align: center;
+    width: 70%;
+  }
+}

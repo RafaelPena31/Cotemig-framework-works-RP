@@ -1,0 +1,229 @@
+.cssChart {
+  display: flex;
+  padding: 0;
+  position: relative;
+}
+
+.lineChart {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dataPoint {
+  background-color: white;
+  border-radius: 50%;
+  bottom: calc(var(--y) - 8px);
+  height: 7px;
+  left: calc(var(--x) - 8px);
+  position: absolute;
+  border: 1px solid black;
+  width: 7px;
+  z-index: 1;
+}
+
+.lineSegment {
+  background-color: black;
+  bottom: var(--y);
+  height: 3px;
+  left: var(--x);
+  position: absolute;
+  transform: rotate(calc(var(--angle) * 1deg));
+  transform-origin: left bottom;
+  width: calc(var(--hypotenuse) * 1px);
+}
+
+#figure {
+  --widget-size: 200px;
+}
+#line0 {
+  --hypotenuse: 55;
+  --angle: 0;
+  left: -30px;
+  bottom: 15px;
+}
+
+.score1 {
+  --x: 22px;
+  --y: 20px;
+  /* y: 5 */
+  /* x : 63 */
+}
+#line1 {
+  --hypotenuse: 33;
+  --angle: -23.5;
+  bottom: 15px;
+}
+
+.score2 {
+  --x: 59px;
+  --y: 35px;
+}
+#line2 {
+  --hypotenuse: 34;
+  --angle: -27.5;
+  bottom: 30px;
+}
+
+.score3 {
+  --x: 96px;
+  --y: 53px;
+}
+#line3 {
+  --hypotenuse: 40;
+  --angle: -29;
+  bottom: 48px;
+}
+
+.score4 {
+  --x: 133px;
+  --y: 72px;
+}
+#line4 {
+  --hypotenuse: 50;
+  --angle: -46;
+  bottom: 69px;
+}
+
+.score5 {
+  --x: 170.5px;
+  --y: 110px;
+}
+#line5 {
+  --hypotenuse: 42;
+  --angle: -35.5;
+  bottom: 106px;
+}
+
+.score6 {
+  --x: 207px;
+  --y: 135px;
+}
+#line6 {
+  --hypotenuse: 42;
+  --angle: -32;
+  bottom: 131px;
+}
+
+.score7 {
+  --x: 244px;
+  --y: 157px;
+}
+#line7 {
+  --hypotenuse: 47;
+  --angle: -41;
+  bottom: 153px;
+}
+
+.score8 {
+  --x: 281px;
+  --y: 189px;
+}
+#line8 {
+  --hypotenuse: 140;
+  --angle: -80;
+  bottom: 185px;
+}
+
+@media (max-width: 1100px) {
+  .dataPoint {
+    width: 6px;
+    height: 6px;
+  }
+  .lineSegment {
+    height: 2px;
+  }
+  #line0 {
+    --hypotenuse: 25;
+    --angle: 0;
+    left: -10px;
+    bottom: 9px;
+  }
+
+  .score1 {
+    --x: 18.5px;
+    --y: 14px;
+  }
+  #line1 {
+    --hypotenuse: 24;
+    --angle: -20;
+    bottom: 10px;
+  }
+
+  .score2 {
+    --x: 47px;
+    --y: 24px;
+  }
+  #line2 {
+    --hypotenuse: 27;
+    --angle: -21;
+    bottom: 20px;
+  }
+
+  .score3 {
+    --x: 76px;
+    --y: 35px;
+  }
+  #line3 {
+    --hypotenuse: 29;
+    --angle: -23;
+    bottom: 31px;
+  }
+
+  .score4 {
+    --x: 105px;
+    --y: 47px;
+  }
+  #line4 {
+    --hypotenuse: 31;
+    --angle: -38;
+    bottom: 44px;
+  }
+
+  .score5 {
+    --x: 134px;
+    --y: 69px;
+  }
+  #line5 {
+    --hypotenuse: 27;
+    --angle: -28;
+    bottom: 66px;
+  }
+
+  .score6 {
+    --x: 163px;
+    --y: 84px;
+  }
+  #line6 {
+    --hypotenuse: 30;
+    --angle: -30;
+    bottom: 81px;
+  }
+
+  .score7 {
+    --x: 192px;
+    --y: 100px;
+  }
+  #line7 {
+    --hypotenuse: 30;
+    --angle: -27;
+    bottom: 97px;
+  }
+
+  .score8 {
+    --x: 221px;
+    --y: 115px;
+  }
+  #line8 {
+    --hypotenuse: 100;
+    --angle: -80;
+    bottom: 112px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cssChart {
+    position: relative;
+    bottom: -150px;
+  }
+}

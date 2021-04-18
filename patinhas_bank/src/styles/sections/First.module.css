@@ -1,0 +1,112 @@
+/*
+Todo o corpo da Primeira Section, contendo o header
+*/
+.Bodies {
+  background-image: linear-gradient(#049492 40.1%, #049492, #ff9492 100%);
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 8%;
+}
+
+/*
+Espacamento entre os cards
+*/
+
+/*
+Todos os Cards
+*/
+.big_ExchangeCardMobile {
+  display: none;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.big_cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/*
+Texto e cards
+*/
+.text_and_cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  padding: 40px 0 0 0;
+}
+
+/*
+h1 dos cards
+*/
+.text h1 {
+  color: white;
+  font-size: clamp(1.8rem, 2.8vw, 3rem);
+  max-width: 1200px;
+  font-family: Montserrat;
+}
+
+/*
+p dos cards
+*/
+.text p {
+  color: #ffffffbb;
+  font-size: clamp(1.2rem, 2vw, 2.2rem);
+  max-width: 900px;
+}
+
+/*
+Image
+*/
+.imgContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  width: 280px;
+}
+
+@media (min-width: 1334px) {
+  .text_and_cards {
+    display: flex;
+    padding: 70px 0 30px 70px;
+    min-height: 65vh;
+  }
+
+  .imgContainer {
+    margin-top: 70px;
+  }
+
+  .Bodies {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    padding-top: 100px;
+  }
+
+  .big_cards {
+    justify-content: flex-start;
+    margin-top: 100px;
+    display: flex;
+  }
+
+  .big_cardsMobile {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .Bodies {
+    padding: 4%;
+    padding-top: 55px;
+  }
+  .img {
+    width: 265px;
+  }
+}

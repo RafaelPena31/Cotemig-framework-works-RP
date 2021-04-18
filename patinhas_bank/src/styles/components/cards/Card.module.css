@@ -1,0 +1,46 @@
+.cardContent {
+  width: 100%;
+  max-width: 420px;
+  min-height: 270px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 5px;
+  background: #fdfdfd;
+  box-shadow: 5px 5px 10px rgb(3 27 78 / 2%), -5px -5px 10px rgb(3 27 78 / 2%);
+  transition: 0.5s box-shadow;
+}
+
+.cardContent:hover {
+  box-shadow: 0 14px 28px rgb(3 27 78 / 9%);
+}
+
+.textName {
+  color: #004e4d;
+  font-weight: 700;
+  font-size: 16pt;
+}
+
+.textDesc {
+  color: #004e4d;
+  font-family: Montserrat;
+  margin-top: 5px;
+}
+
+.textBeforeValue {
+  color: #5b6987;
+  font-family: Montserrat;
+  font-weight: 300;
+  text-decoration: line-through;
+  line-height: 100%;
+}
+
+.textActuallyValue {
+  color: #049492;
+  font-family: Montserrat;
+  font-size: 25pt;
+  font-weight: 200;
+  line-height: 100%;
+}

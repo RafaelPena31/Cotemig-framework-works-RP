@@ -1,0 +1,43 @@
+:root {
+  --title: #1e1e1e;
+  --text-secondary: #aaaaaa;
+  --text-tertiary: #c4c4c4;
+
+  --primary: #049492;
+  --secondary: #ff9492;
+
+  --background: #f3f5f9;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  font-family: Roboto, Helvetica Neue, sans-serif;
+  background-color: var(--background);
+}
+
+main {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  min-height: 100vh;
+  align-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}

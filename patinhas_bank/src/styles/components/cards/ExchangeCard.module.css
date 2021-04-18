@@ -1,0 +1,133 @@
+.whiteCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 10px 17px 10px;
+  margin: 30px 0px 30px 0;
+  width: 200px;
+  height: 150px;
+
+  border-radius: 20px;
+  background: linear-gradient(145deg, #dbdde0, #ffffff);
+  box-shadow: 20px 20px 60px #cfd0d4, -20px -20px 60px #ffffff;
+}
+
+.greenCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px 10px 17px 10px;
+  margin: 30px 0px 30px 0;
+  width: 200px;
+  height: 150px;
+
+  border-radius: 20px;
+  background: linear-gradient(145deg, #048583, #049e9c);
+  box-shadow: 7px 7px 35px #048886, -7px -7px 35px #04a09e;
+}
+
+/*
+Todos os textos do card
+*/
+.whiteTitle {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*
+Nome das Ações
+*/
+.whiteTitle h1 {
+  color: #1e1e1e;
+  font-size: 20px;
+}
+
+/*
+Valor das Ações
+*/
+.whiteTitle p {
+  color: #353535;
+  font-size: 20px;
+  text-align: center;
+
+  font-weight: 700;
+  margin-top: 0;
+}
+
+/*
+Todos os textos do card
+*/
+.title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*
+Nome das Ações
+*/
+.title h1 {
+  color: #f7f7f7;
+  font-size: 20px;
+}
+
+/*
+Valor das Ações
+*/
+.title p {
+  color: #dfdfdf;
+  font-size: 20px;
+  text-align: center;
+
+  font-weight: 700;
+  margin-top: 0;
+}
+
+/*
+Porcentagem das ações
+*/
+.acao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 25px;
+
+  font-size: 12px;
+  color: white;
+  border-radius: 3px;
+  background: #0b9b0b;
+}
+
+.red {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 25px;
+
+  font-size: 12px;
+  color: white;
+  border-radius: 3px;
+  background: #f30303;
+}
+
+@media (min-width: 520px) {
+  .greenCard,
+  .whiteCard {
+    margin: 30px 30px 30px 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .whiteCard {
+    box-shadow: none;
+  }
+
+  .greenCard {
+    box-shadow: none;
+  }
+}
