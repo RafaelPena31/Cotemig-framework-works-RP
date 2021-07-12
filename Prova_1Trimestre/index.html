@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <title>
+      Prova - Rafael Augusto Pena Pereira Mesquita - Cotemig | Framework
+    </title>
+    <style>
+      /* Classe responsável por atribuir a animação */
+      .shake-animate {
+        animation: shakeLabel 0.5s;
+        animation-iteration-count: 1;
+      }
+
+      /* Animação responsável pelo balanço das "label" do formulário */
+      @keyframes shakeLabel {
+        0% {
+          transform: translate(1px, 1px) rotate(0deg);
+        }
+        10% {
+          transform: translate(-1px, -2px) rotate(-1deg);
+        }
+        20% {
+          transform: translate(-3px, 0px) rotate(1deg);
+        }
+        30% {
+          transform: translate(3px, 2px) rotate(0deg);
+        }
+        40% {
+          transform: translate(1px, -1px) rotate(1deg);
+        }
+        50% {
+          transform: translate(-1px, 2px) rotate(-1deg);
+        }
+        60% {
+          transform: translate(-3px, 1px) rotate(0deg);
+        }
+        70% {
+          transform: translate(3px, 1px) rotate(-1deg);
+        }
+        80% {
+          transform: translate(-1px, -1px) rotate(1deg);
+        }
+        90% {
+          transform: translate(1px, 2px) rotate(0deg);
+        }
+        100% {
+          transform: translate(1px, -2px) rotate(-1deg);
+        }
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column align-items-center">
+    <form class="w-50" id="list-form">
+      <h1 class="mb-3">Encomendas - Turmaline</h1>
+      <div class="mb-3">
+        <label for="nameInput" class="form-label" id="labelNameInput"
+          >Nome do cliente</label
+        >
+        <input
+          id="nameInput"
+          type="text"
+          class="form-control"
+          placeholder="Ex. José Augusto"
+          minlength="3"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="contentInput" class="form-label" id="labelContentInput"
+          >Conteúdo da carga</label
+        >
+        <textarea
+          class="form-control"
+          id="contentInput"
+          rows="3"
+          placeholder="Ex. Televisão 50p"
+          minlength="8"
+        ></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="dateInput" class="form-label" id="labelDateInput"
+          >Prazo de entrega</label
+        >
+        <input
+          type="date"
+          class="form-control"
+          id="dateInput"
+          min="2000-01-01"
+        />
+      </div>
+      <button type="submit" class="btn btn-primary mb-3 w-100">
+        Adicionar encomenda
+      </button>
+    </form>
+
+    <div class="list-group w-50" id="list"></div>
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
+      integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JS Controller -->
+    <script src="main.js"></script>
+
+    <!-- JS Animate to Gleidin Controller -->
+    <script src="animateToGleidin.js"></script>
+  </body>
+</html>

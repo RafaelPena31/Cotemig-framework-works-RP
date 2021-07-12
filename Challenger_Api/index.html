@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Data At Work - Jobs</title>
+    <!-- TODO: Remove static import from css -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/grid.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
+    />
+  </head>
+  <body>
+    <div class="banner-wrapper">
+      <div class="banner">
+        <h2 class="banner-title">Job and Skills - Search for a definition</h2>
+        <form class="form-group">
+          <!-- TODO: validate form before submit (use one attribuite)-->
+          <input
+            minlength="5"
+            class="form-control"
+            placeholder="🔎 Try it out!"
+            type="text"
+          />
+        </form>
+      </div>
+    </div>
+    <main>
+      <div class="container main-content">
+        <div class="row">
+          <section class="col-6 content-box">
+            <!-- TODO: Create selector to change to skills and load skills -->
+            <h3>All Job Definition Avalible</h3>
+
+            <div id="main-scope"></div>
+
+            <div class="pagination">
+              <!-- TODO: implement previous page action -->
+              <button class="btn btn-simple btn-prev pull-left">
+                < Previous
+              </button>
+              <!-- TODO: implement next page action -->
+              <button class="btn btn-simple btn-next pull-right">Next ></button>
+            </div>
+          </section>
+          <aside class="col-6 search-box">
+            <h3>
+              <span class="feedback-check" data-id="1" hidden>
+                Results for:
+              </span>
+              <span class="feedback-check" data-id="2" hidden>
+                Searching for:
+              </span>
+              <span class="feedback-check" data-id="3" hidden>
+                No Maching results for:
+              </span>
+              <p class="feedback-check text-center" data-id="4">
+                Your search results will apper here 😊
+              </p>
+              <span class="typing-keyword" hidden>{keyword}</span>
+            </h3>
+
+            <!-- TODO: Show card with all information about the searched job-->
+          </aside>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="row">
+        <div class="col">
+          <a
+            href="https://cotemig.com.br"
+            title="Cotemig: Sua revolução começa aqui"
+          >
+            <!-- TODO: convert this SVG to a file-->
+            <!-- FEITO -->
+            <img src="img/logo.svg" class="footer-logo" />
+          </a>
+        </div>
+        <div class="col">
+          <!-- TODO: Add your signature, name and email!-->
+          <!-- FEITO -->
+          <p>
+            Some of the challenges were solved with ❤ by
+            <a href="mailto:11901322@aluno.cotemig.com.br">Rafael Pena</a>
+            <br /><br />
+            Thank you for the challenge!
+          </p>
+        </div>
+        <div class="col">
+          <p>
+            Developed with ❤ by
+            <a href="mailto:gleidson@cotemig.com.br">Gleidson Braga</a>
+            <br /><br />
+            Enjoy the challenge!
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- All scripts keep the order is important -->
+    <script src="js/api-handler.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
