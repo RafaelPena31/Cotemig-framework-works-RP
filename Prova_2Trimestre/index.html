@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>11901322 - Cadastro Personagem - Prova: 2º Trimestre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <form name="cadastro" method="post" action="">
+      <div class="container">
+        <h1>Cadastro do Personagem</h1>
+        <div class="campo">
+          <label for="nomejog">Nome: </label>
+          <input
+            id="nome"
+            name="nomejog"
+            type="text"
+            value=""
+            placeholder="Digite o nome"
+          />
+        </div>
+
+        <div class="campo">
+          <label for="classe">Classe: </label>
+          <select name="classe" id="classe">
+            <option value="Guerreiro">Guerreiro</option>
+            <option value="Mago">Mago</option>
+            <option value="Feiticeiro">Feiticeiro</option>
+            <option value="Bardo">Bardo</option>
+          </select>
+        </div>
+
+        <div class="campo">
+          <label for="raca">Raça: </label>
+          <div class="radio-container">
+            <span>
+              <input type="radio" name="raca" value="Humano" checked />
+              <p>Humano</p>
+            </span>
+
+            <span>
+              <input type="radio" name="raca" value="Elfo" />
+              <p>Elfo</p>
+            </span>
+
+            <span>
+              <input type="radio" name="raca" value="Anão" />
+              <p>Anão</p>
+            </span>
+          </div>
+        </div>
+
+        <legend>Atributos</legend>
+        <div class="campo">
+          <div class="atributos">
+            <div class="pontos">
+              <label>Pontos: </label>
+              <input type="text" name="pt" id="pt" value="10" readonly />
+            </div>
+            <div class="atributo">
+              <span>
+                <section>
+                  <input
+                    type="button"
+                    value="+"
+                    class="botao"
+                    onclick="adicionaAtributo('forca')"
+                  />
+                  <input
+                    type="button"
+                    value="-"
+                    class="botao"
+                    onclick="removeAtributo('forca')"
+                  />
+                </section>
+
+                <input type="text" name="forca" id="forca" value="0" readonly />
+              </span>
+
+              <label>Força</label>
+            </div>
+
+            <div class="atributo">
+              <span>
+                <section>
+                  <input
+                    type="button"
+                    value="+"
+                    class="botao"
+                    onclick="adicionaAtributo('destreza')"
+                  />
+                  <input
+                    type="button"
+                    value="-"
+                    class="botao"
+                    onclick="removeAtributo('destreza')"
+                  />
+                </section>
+
+                <input
+                  type="text"
+                  name="destreza"
+                  id="destreza"
+                  value="0"
+                  readonly
+                />
+              </span>
+
+              <label>Destreza</label>
+            </div>
+
+            <div class="atributo">
+              <span>
+                <section>
+                  <input
+                    type="button"
+                    value="+"
+                    class="botao"
+                    onclick="adicionaAtributo('inteligencia')"
+                  />
+                  <input
+                    type="button"
+                    value="-"
+                    class="botao"
+                    onclick="removeAtributo('inteligencia')"
+                  />
+                </section>
+
+                <input
+                  type="text"
+                  name="inteligencia"
+                  id="inteligencia"
+                  readonly
+                  value="0"
+                />
+              </span>
+
+              <label>Inteligência</label>
+            </div>
+
+            <div class="atributo">
+              <span>
+                <section>
+                  <input
+                    type="button"
+                    value="+"
+                    class="botao"
+                    onclick="adicionaAtributo('carisma')"
+                  />
+                  <input
+                    type="button"
+                    value="-"
+                    class="botao"
+                    onclick="removeAtributo('carisma')"
+                  />
+                </section>
+
+                <input
+                  type="text"
+                  name="carisma"
+                  id="carisma"
+                  value="0"
+                  readonly
+                />
+              </span>
+
+              <label>Carisma</label>
+            </div>
+
+            <div class="atributo">
+              <span>
+                <section>
+                  <input
+                    type="button"
+                    value="+"
+                    class="botao"
+                    onclick="adicionaAtributo('sabedoria')"
+                  />
+                  <input
+                    type="button"
+                    value="-"
+                    class="botao"
+                    onclick="removeAtributo('sabedoria')"
+                  />
+                </section>
+
+                <input
+                  type="text"
+                  name="sabedoria"
+                  id="sabedoria"
+                  value="0"
+                  readonly
+                />
+              </span>
+
+              <label>Sabedoria</label>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" onclick="saveCharacter()">enviar</button>
+      </div>
+    </form>
+
+    <form action="">
+      <div class="container">
+        <h1>Resultado</h1>
+        <div class="campo">
+          <label for="nomejog">Nome: </label>
+          <input
+            id="nomeResult"
+            name="nomejogResult"
+            type="text"
+            value=""
+            placeholder="nome"
+            readonly
+          />
+        </div>
+
+        <div class="campo">
+          <label for="classjog">Classe: </label>
+          <input
+            id="classResult"
+            name="classjogResult"
+            type="text"
+            value=""
+            placeholder="class"
+            readonly
+          />
+        </div>
+
+        <div class="campo">
+          <label for="racajog">Raça: </label>
+          <input
+            id="racaResult"
+            name="racajogResult"
+            type="text"
+            value=""
+            placeholder="raca"
+            readonly
+          />
+        </div>
+
+        <div class="campo">
+          <label for="forcajog">Força: </label>
+          <input
+            id="forcaResult"
+            name="forcajogResult"
+            type="text"
+            value=""
+            placeholder="forca"
+            readonly
+          />
+        </div>
+
+        <div class="campo">
+          <label for="destrezajog">Destreza: </label>
+          <input
+            id="destrezaResult"
+            name="destrezajogResult"
+            type="text"
+            value=""
+            placeholder="destreza"
+            readonly
+          />
+        </div>
+
+        <div class="campo">
+          <label for="inteligenciajog">Inteligência: </label>
+          <input
+            id="inteligenciaResult"
+            name="inteligenciajogResult"
+            type="text"
+            value=""
+            placeholder="inteligencia"
+          />
+        </div>
+
+        <div class="campo">
+          <label for="carismajog">Carisma: </label>
+          <input
+            id="carismaResult"
+            name="carismajogResult"
+            type="text"
+            value=""
+            placeholder="carisma"
+            readonly
+          />
+        </div>
+
+        <div class="campo">
+          <label for="sabedoriajog">Sabedoria: </label>
+          <input
+            id="sabedoriaResult"
+            name="sabedoriajogResult"
+            type="text"
+            value=""
+            placeholder="sabedoria"
+            readonly
+          />
+        </div>
+      </div>
+    </form>
+
+    <div id="resultado" class="atributos"></div>
+  </body>
+  <script type="text/javascript" src="script.js"></script>
+</html>
