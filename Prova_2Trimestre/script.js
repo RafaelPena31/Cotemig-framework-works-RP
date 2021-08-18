@@ -1,15 +1,40 @@
+/* PROPRIEDADES */
+
+/**
+ * @file Manipulador das propriedades do personagem
+ * @author Rafael Augusto Pena Pereira Mesquita
+ */
+
+/**
+ * @description Variável de controle: characterName {HTMLElement}: responsável por armazenar o [input (type="text")] do nome do personagem
+ */
 let characterName = document.getElementById("nome");
+
+/**
+ * @description Variável de controle: characterClass {HTMLElement}: responsável por armazenar o [input (type="text")] da classe do personagem
+ */
 let characterClass = document.getElementById("classe");
+
+/**
+ * @description Variável de controle: characterBreed {HTMLElement}: responsável por armazenar o [input (type="text")] da raça do personagem
+ */
 let characterBreed = document.querySelector('input[name="raca"]:checked');
 
+/**
+ * @description Variável de controle: score {HTMLElement}: responsável por armazenar o [input (type="text")] da pontuação dos atributos do personagem
+ */
 let score = document.getElementById("pt");
 
+/* ====================================================================== */
+
+/* Variáveis dos inputs dos atributos */
 var forca = document.getElementById("forca");
 var destreza = document.getElementById("destreza");
 var inteligencia = document.getElementById("inteligencia");
 var carisma = document.getElementById("carisma");
 var sabedoria = document.getElementById("sabedoria");
 
+/* Variáveis dos inputs de resultado das propriedades do personagem */
 var resultName = document.getElementById("nomeResult");
 var resultClass = document.getElementById("classResult");
 var resultBreed = document.getElementById("racaResult");
@@ -19,6 +44,10 @@ var resultInteligencia = document.getElementById("inteligenciaResult");
 var resultCarisma = document.getElementById("carismaResult");
 var resultSabedoria = document.getElementById("sabedoriaResult");
 
+/**
+ * @description Função responsável por atribuir os valores dos inputs de entrada do personagem para os de saída
+ * @returns {void}
+ */
 function saveCharacter() {
   resultName.value = characterName.value;
   resultClass.value = characterClass.value;
@@ -30,6 +59,12 @@ function saveCharacter() {
   resultSabedoria.value = sabedoria.value;
 }
 
+/**
+ * @description Função responsável por atribuir valor a um atributo em específico e subtrair a pontuação de acordo com as regras de negócio estipulada
+ *
+ * @param attr {string} - Valor que representa qual o atributo a ser alterado
+ * @returns {void}
+ */
 function adicionaAtributo(attr) {
   switch (attr) {
     case "forca":
@@ -72,6 +107,12 @@ function adicionaAtributo(attr) {
   }
 }
 
+/**
+ * @description Função responsável por desatribuir valor a um atributo em específico e subtrair a pontuação de acordo com as regras de negócio estipulada
+ *
+ * @param attr {string} - Valor que representa qual o atributo a ser alterado
+ * @returns {void}
+ */
 function removeAtributo(attr) {
   switch (attr) {
     case "forca":
