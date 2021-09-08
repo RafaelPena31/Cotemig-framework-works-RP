@@ -1,3 +1,4 @@
+import { Button } from 'antd'
 import React from 'react'
 
 interface ImcButtonProps {
@@ -5,5 +6,9 @@ interface ImcButtonProps {
 }
 
 export default function ImcButton({ onClick }: ImcButtonProps) {
-  return <button onClick={onClick}>Calcular IMC</button>
+  return (
+    <Button type='primary' onClick={onClick}>
+      Calcular IMC
+    </Button>
+  )
 }

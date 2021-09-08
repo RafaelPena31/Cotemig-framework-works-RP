@@ -1,3 +1,4 @@
+import { Input, InputNumber } from 'antd'
 import React from 'react'
 import { Gender } from '../../types/global'
 
@@ -18,16 +19,9 @@ export default function ImcForm({ name, age, gender, height, weight }: ImcFormPr
   return (
     <div className='content-form'>
       <form className='imc-form'>
-        <div>
+        <div className='input-form'>
           <label htmlFor='input'>Nome:</label>
-          <input
-            type='text'
-            name='nome'
-            id='nome'
-            placeholder='Nome'
-            value={name.value}
-            onChange={({ target }) => name.setChangeValue(target.value)}
-          />
+          <Input placeholder='Nome' value={name.value} onChange={({ target }) => name.setChangeValue(target.value)} />
         </div>
 
         <div className='radio'>
@@ -54,39 +48,39 @@ export default function ImcForm({ name, age, gender, height, weight }: ImcFormPr
           </div>
         </div>
 
-        <div>
+        <div className='input-form'>
           <label htmlFor='input'>Idade:</label>
-          <input
-            type='number'
-            name='idade'
-            id='idade'
+          <InputNumber
             placeholder='Idade'
-            value={age.value}
-            onChange={({ target }) => age.setChangeValue(target.value)}
+            min={0}
+            max={3}
+            defaultValue={0}
+            value={+age.value}
+            onChange={v => age.setChangeValue(v.toString())}
           />
         </div>
 
-        <div>
+        <div className='input-form'>
           <label htmlFor='input'>Peso:</label>
-          <input
-            type='number'
-            name='peso'
-            id='peso'
+          <InputNumber
             placeholder='Peso'
-            value={weight.value}
-            onChange={({ target }) => weight.setChangeValue(target.value)}
+            min={0}
+            max={3}
+            defaultValue={0}
+            value={+weight.value}
+            onChange={v => weight.setChangeValue(v.toString())}
           />
         </div>
 
-        <div>
+        <div className='input-form'>
           <label htmlFor='input'>Altura (Metros):</label>
-          <input
-            type='number'
-            name='altura'
-            id='altura'
+          <InputNumber
             placeholder='Altura (Metros)'
-            value={height.value}
-            onChange={({ target }) => height.setChangeValue(target.value)}
+            min={0}
+            max={3}
+            defaultValue={0}
+            value={+height.value}
+            onChange={v => height.setChangeValue(v.toString())}
           />
         </div>
       </form>

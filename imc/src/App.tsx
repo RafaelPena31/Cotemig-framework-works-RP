@@ -1,8 +1,11 @@
+import 'antd/dist/antd.css'
 import React, { useState } from 'react'
 import ImcButton from './components/core/imc-button.component'
 import ImcResultPanel from './components/core/imc-result-panel.component'
 import ImcForm from './components/core/imc.component'
+import './style/global.css'
 import { Gender, ImcStatus } from './types/global'
+
 function App() {
   const [name, setName] = useState('')
   const [age, setAge] = useState('')
