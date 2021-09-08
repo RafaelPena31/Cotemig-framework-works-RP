@@ -50,26 +50,12 @@ export default function ImcForm({ name, age, gender, height, weight }: ImcFormPr
 
         <div className='input-form'>
           <label htmlFor='input'>Idade:</label>
-          <InputNumber
-            placeholder='Idade'
-            min={0}
-            max={3}
-            defaultValue={0}
-            value={+age.value}
-            onChange={v => age.setChangeValue(v.toString())}
-          />
+          <InputNumber placeholder='Idade' min={0} max={200} value={+age.value} onChange={v => age.setChangeValue(v.toString())} />
         </div>
 
         <div className='input-form'>
           <label htmlFor='input'>Peso:</label>
-          <InputNumber
-            placeholder='Peso'
-            min={0}
-            max={3}
-            defaultValue={0}
-            value={+weight.value}
-            onChange={v => weight.setChangeValue(v.toString())}
-          />
+          <InputNumber placeholder='Peso' min={0} max={300} value={+weight.value} onChange={v => weight.setChangeValue(v.toString())} />
         </div>
 
         <div className='input-form'>
@@ -78,7 +64,6 @@ export default function ImcForm({ name, age, gender, height, weight }: ImcFormPr
             placeholder='Altura (Metros)'
             min={0}
             max={3}
-            defaultValue={0}
             value={+height.value}
             onChange={v => height.setChangeValue(v.toString())}
           />
