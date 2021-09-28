@@ -28,7 +28,7 @@ export default class CharacterComponent extends React.Component {
         <section className="episode-list">
           {characters.map((c) => (
             <CharacterCard
-              key={c.id}
+              key={c.char_id}
               name={c.name}
               nick={c.nickname}
               img={c.img}

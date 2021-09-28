@@ -28,7 +28,7 @@ export default class EpisodeComponent extends React.Component {
         <section className="episode-list">
           {episodes.map((ep) => (
             <EpisodeCard
-              key={ep.id}
+              key={ep.episode_id}
               name={ep.title}
               number={ep.episode}
               date={ep.air_date}

@@ -28,7 +28,7 @@ export default class DeathComponent extends React.Component {
         <section className="episode-list">
           {deaths.map((c) => (
             <DefaultCard
-              key={c.id}
+              key={c.death_id}
               title={c.death}
               description={`Episódio: ${c.episode}`}
               secondaryDescription={`S${c.season}`}
