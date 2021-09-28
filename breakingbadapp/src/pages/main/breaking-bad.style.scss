@@ -1,0 +1,17 @@
+.App {
+  padding: 24px;
+
+  .big-img {
+    width: 100%;
+  }
+
+  .episode-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    .break-card {
+      margin: 8px;
+    }
+  }
+}
